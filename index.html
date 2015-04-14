@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<style>
+			.axis path {
+ 			   	fill: none;
+    			stroke: #777;
+    			shape-rendering: crispEdges;
+			}
+			.axis text {
+    			font-family: Lato;
+    			font-size: 13px;
+			}
+			.area {
+    			fill: lightgrey;
+    			stroke-width: 0;
+    			opacity: 0.7;
+			}
+			.axis line {
+    			stroke: lightgrey;
+    			opacity: 0.7;
+			}
+			.axis line.quadrantBorder{
+				stroke: black;
+				opacity: 0.5;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" onclick="generateNewLine()" value="Add New" />
+		<input type="checkbox" onchange="updateArea()" /> Toggle Area
+		<input type="button" onclick="updateScale()" value="Update Scale" />
+		<div class="container">
+		 	<div class="jumbotron">
+		 		<svg id="visualisation" width="1000" height="500"></svg>
+ 			</div>
+ 		</div>
+	</body>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="d3.min.js"></script>
+	<script src="data.js"></script>
+	<script src="static.js"></script>
+</html>
